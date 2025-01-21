@@ -10,7 +10,7 @@ def post_list(request):
     posts=Bolo.objects.all()
     return render(request, 'bolos/post_list.html',  {'posts': posts})
 
-def post_detail(request, pk):
-    post = get_object_or_404(Bolo, pk=pk)
+def post_detail(request, aniversario):
+    post = get_object_or_404(Bolo, aniversario=aniversario)
     return render(request, 'bolos/post_detail.html', {'post': post})
 
